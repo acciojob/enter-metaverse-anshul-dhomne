@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Enter Metaverse</title>
+  <meta charset="UTF-8">
+  <title>Enter Metaverse</title>
 </head>
 <body>
 
-    <!-- Initial paragraph -->
-    <p id="status">Enter the Metaverse</p>
+  <h2>enter-metaverse</h2>
 
-    <!-- Button to trigger the change -->
-    <button id="enterBtn">Enter</button>
+  <!-- Keep the <p> with ID -->
+  <p id="status">Enter the Metaverse</p>
 
-    <script>
-        // Get references to the paragraph and button
-        const statusElement = document.getElementById('status');
-        const enterButton = document.getElementById('enterBtn');
+  <button id="enterBtn">Enter</button>
 
-        // Add click event listener to the button
-        enterButton.addEventListener('click', () => {
-            // Create new <h1> element
-            const newHeading = document.createElement('h1');
-            newHeading.textContent = 'Entered Metaverse';
-            newHeading.id = 'status'; // Maintain same ID
+  <script>
+    const statusElement = document.getElementById('status');
+    const enterButton = document.getElementById('enterBtn');
 
-            // Replace <p> with <h1>
-            statusElement.replaceWith(newHeading);
-        });
-    </script>
+    enterButton.addEventListener('click', () => {
+      // Inject <h1> inside the <p id="status">
+      statusElement.innerHTML = '<h1>Entered Metaverse</h1>';
+    });
+  </script>
 
 </body>
 </html>
